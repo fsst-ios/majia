@@ -1,0 +1,164 @@
+import 'package:flutter/widgets.dart';
+
+import '../domain/models.dart';
+
+class AppStrings {
+  AppStrings(this.locale);
+
+  final Locale locale;
+  bool get isZh => locale.languageCode == 'zh';
+  String text(String zh, String en) => isZh ? zh : en;
+
+  String get appName => text('图证实验室', 'PlotProof Lab');
+  String get learn => text('学习', 'Learn');
+  String get review => text('复练', 'Review');
+  String get progress => text('进度', 'Progress');
+  String get settings => text('设置', 'Settings');
+  String get offlineBadge =>
+      text('离线 · 无账号 · 无追踪', 'Offline · No account · No tracking');
+  String get homeTitle =>
+      text('把“看起来”变成“有证据”', 'Turn “looks true” into evidence');
+  String get homeBody => text(
+    '先做判断，再亲手改变一个变量。比较同一数据的两种表达，找到论断越界的位置。',
+    'Commit first, then change one variable. Compare two views of the same data and find where the claim goes too far.',
+  );
+  String get continueLearning => text('继续实验', 'Continue lab');
+  String get start => text('开始', 'Start');
+  String get retry => text('再练一次', 'Try again');
+  String get done => text('已完成', 'Completed');
+  String get needsReview => text('待复练', 'Review');
+  String get lessons => text('个实验', 'labs');
+  String get completed => text('完成', 'complete');
+  String get verdictPrompt => text('先提交你的判断', 'Commit your judgment');
+  String get verdictHelp => text(
+    '提交后才能操作实验参数；答案不会因调参而改变。',
+    'Experiment controls unlock after you commit. Changing a parameter cannot change your answer.',
+  );
+  String get misleading => text('有误导性', 'Misleading');
+  String get fair => text('表达公平', 'Fair');
+  String get needsContext => text('证据不足', 'Needs context');
+  String get investigate => text('第二步 · 操作证据', 'Step 2 · Test the evidence');
+  String get lockedExperiment =>
+      text('先提交判断以解锁实验', 'Commit a judgment to unlock the lab');
+  String get exploreHint => text(
+    '改变一次参数，观察同一数据如何改写视觉或结论。',
+    'Change the parameter once and watch the same data reshape the visual or claim.',
+  );
+  String get reveal => text('查看对照与解析', 'Reveal comparison');
+  String get saveFailed =>
+      text('无法保存进度，请重试。', 'Could not save progress. Try again.');
+  String get loadFailed => text(
+    '本地学习记录已损坏，尚未修改原数据。可重置后恢复使用。',
+    'Local learning data is damaged. The original data is unchanged; reset it to recover.',
+  );
+  String get clearFailed => text(
+    '无法清除损坏的本地记录，请重试。',
+    'Could not clear the damaged local data. Try again.',
+  );
+  String get resetLocalData => text('重置本地记录', 'Reset local data');
+  String get resultNotSaved => text(
+    '解析已显示，但这次结果尚未保存。修复存储问题后可重试。',
+    'The explanation is available, but this result is not saved. Retry after storage recovers.',
+  );
+  String get retrySave => text('重试保存', 'Retry save');
+  String get comparisonTitle =>
+      text('同一数据 · 公平对照', 'Same data · fair comparison');
+  String get initialView => text('初始表达', 'Initial view');
+  String get fairView => text('补全后的表达', 'Context restored');
+  String get equivalentFairView => text('另一种公平表达', 'Another fair presentation');
+  String get unchangedData => text(
+    '数据没有改变；只补全了本关正在检验的呈现变量或语境。',
+    'The data is unchanged. Only the tested presentation variable or context is restored.',
+  );
+  String get unchangedFairData => text(
+    '数据没有改变；第二种表达用于检验公平结论在等价语境中是否仍然成立。',
+    'The data is unchanged. The second view checks whether the fair conclusion still holds in an equivalent context.',
+  );
+  String get correct => text('判断准确', 'Good judgment');
+  String get incorrect => text('这里值得再看一眼', 'Worth another look');
+  String get checkNextTime => text('下次检查', 'Check next time');
+  String get syntheticData => text(
+    '本关使用自创合成教学数据，不代表真实人物、机构或事件。',
+    'This lab uses original synthetic teaching data and represents no real person, organization, or event.',
+  );
+  String get backToLabs => text('返回实验列表', 'Back to labs');
+  String get noReviewTitle => text('错题队列是空的', 'Your review queue is clear');
+  String get noReviewBody => text(
+    '完成实验后，最近一次判断错误的关卡会出现在这里。',
+    'After a lab, lessons with an incorrect latest attempt appear here.',
+  );
+  String get reviewTitle => text('按误区复练', 'Review by misconception');
+  String get reviewBody => text(
+    '重新正确完成关卡后，它会从队列中移除。',
+    'Complete a lesson correctly to remove it from this queue.',
+  );
+  String get progressTitle => text('学习证据', 'Learning evidence');
+  String get attempts => text('作答次数', 'Attempts');
+  String get accuracy => text('累计正确率', 'Accuracy');
+  String get mastered => text('最近已掌握', 'Mastered now');
+  String get misconceptionMap => text('误区记录', 'Misconception map');
+  String get noAttempts => text(
+    '还没有学习记录。先完成一个实验。',
+    'No learning evidence yet. Complete a lab first.',
+  );
+  String get localOnly =>
+      text('这些记录只保存在当前设备。', 'These records stay on this device.');
+  String get language => text('语言', 'Language');
+  String get simplifiedChinese => text('简体中文', 'Simplified Chinese');
+  String get english => text('English', 'English');
+  String get privacyTitle => text('隐私与边界', 'Privacy and limits');
+  String get privacyBody => text(
+    '无需账号或网络，不请求系统权限，不包含广告或分析 SDK。仅在设备上保存学习记录与语言偏好。本应用训练数据识读，不判断真实新闻真伪，也不提供投资、医疗或统计建议。',
+    'No account or network is required. The app requests no system permissions and contains no ads or analytics SDKs. Only learning progress and language preference are stored on device. This app teaches data literacy; it does not verify real news or provide financial, medical, or statistical advice.',
+  );
+  String get clearProgress => text('清除全部学习记录', 'Clear all learning progress');
+  String get clearConfirmTitle => text('清除本地记录？', 'Clear local progress?');
+  String get clearConfirmBody => text(
+    '所有作答历史、完成状态和错题队列都会从这台设备删除。此操作无法撤销。',
+    'All attempts, completion status, and review items will be removed from this device. This cannot be undone.',
+  );
+  String get cancel => text('取消', 'Cancel');
+  String get clear => text('清除', 'Clear');
+  String get cleared => text('学习记录已清除', 'Learning progress cleared');
+  String get axis => text('坐标与尺度', 'Axes & scale');
+  String get axisDescription => text(
+    '识别被放大的视觉差异，也判断何时窄范围是合理的。',
+    'Spot amplified differences and judge when a narrow range is legitimate.',
+  );
+  String get correlation => text('相关与因果', 'Correlation & cause');
+  String get correlationDescription => text(
+    '移动异常点、检查混杂因素，不让一个系数替代论证。',
+    'Move an outlier, inspect confounders, and never let one coefficient replace an argument.',
+  );
+  String get sample => text('样本与代表性', 'Samples & representation');
+  String get sampleDescription => text(
+    '改变样本构成，观察总体估计如何漂移。',
+    'Change sample composition and watch the population estimate move.',
+  );
+  String get risk => text('风险与概率表达', 'Risk & probability');
+  String get riskDescription => text(
+    '在相对值、绝对值和自然频率之间保持同一语境。',
+    'Keep context aligned across relative, absolute, and natural frequencies.',
+  );
+  String verdict(Verdict verdict) => switch (verdict) {
+    Verdict.misleading => misleading,
+    Verdict.fair => fair,
+    Verdict.needsContext => needsContext,
+  };
+  String moduleName(LessonKind kind) => switch (kind) {
+    LessonKind.axis => axis,
+    LessonKind.correlation => correlation,
+    LessonKind.sample => sample,
+    LessonKind.risk => risk,
+  };
+  String moduleDescription(LessonKind kind) => switch (kind) {
+    LessonKind.axis => axisDescription,
+    LessonKind.correlation => correlationDescription,
+    LessonKind.sample => sampleDescription,
+    LessonKind.risk => riskDescription,
+  };
+}
+
+extension LocalizedTextResolution on LocalizedText {
+  String of(BuildContext context) => resolve(Localizations.localeOf(context));
+}
