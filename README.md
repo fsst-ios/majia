@@ -6,4 +6,4 @@
 | --- | --- | --- |
 | Jufu（photo） | [`apps/photo/`](apps/photo/) | [`CherryIce/photo`](https://github.com/CherryIce/photo)，迁移基点 `295a625059f8f4102d194029ba9bc58c68e87eb6` |
 
-`photo` 的 iOS CI 只进行无签名构建，不生成可安装的 IPA。正式签名发布需要单独配置证书、描述文件和受保护的 GitHub Environment。
+`photo` 的 [iOS CI](.github/workflows/photo-ios-ci.yml) 只进行无签名构建，不生成可安装的 IPA。正式 Release Bundle ID 为 `com.lunelle.lite`；签名发布还需要单独配置证书、描述文件和受保护的 GitHub Environment。
