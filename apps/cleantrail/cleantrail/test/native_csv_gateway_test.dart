@@ -1,0 +1,74 @@
+import 'dart:io';
+
+import 'package:cleantrail/data/native_csv_gateway.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+void main() {
+  late Directory temporary;
+
+  setUp(() async {
+    temporary = await Directory.systemTemp.createTemp('cleantrail-export-');
+  });
+
+  tearDown(() async {
+    if (await temporary.exists()) await temporary.delete(recursive: true);
+  });
+
+  test('export shares draft names and removes both staged files', () async {
+    final gateway = NativeCsvGateway(
+      temporaryDirectoryProvider: () async => temporary,
+      share: (params) async {
+        expect(params.fileNameOverrides!.first, 'private_draft.csv');
+        expect(params.files, hasLength(2));
+        for (final file in params.files!) {
+          expect(await File(file.path).exists(), isTrue);
+        }
+      },
+    );
+
+    await gateway.export(
+      baseName: 'private',
+      csv: 'name\nsecret',
+      report: '# report',
+      shareText: 'share',
+      complete: false,
+    );
+
+    final exportDirectory = Directory('${temporary.path}/cleantrail-exports');
+    expect(await exportDirectory.list().toList(), isEmpty);
+  });
+
+  test('both staged files are removed when sharing throws', () async {
+    final gateway = NativeCsvGateway(
+      temporaryDirectoryProvider: () async => temporary,
+      share: (_) async => throw const FileSystemException('share failed'),
+    );
+
+    await expectLater(
+      gateway.export(
+        baseName: 'private',
+        csv: 'name\nsecret',
+        report: '# report',
+        shareText: 'share',
+        complete: true,
+      ),
+      throwsA(isA<FileSystemException>()),
+    );
+    final exportDirectory = Directory('${temporary.path}/cleantrail-exports');
+    expect(await exportDirectory.list().toList(), isEmpty);
+  });
+
+  test('startup cleanup removes stale dedicated export directory', () async {
+    final directory = Directory('${temporary.path}/cleantrail-exports');
+    await directory.create();
+    await File('${directory.path}/stale.csv').writeAsString('private');
+    final gateway = NativeCsvGateway(
+      temporaryDirectoryProvider: () async => temporary,
+      share: (_) async {},
+    );
+
+    await gateway.cleanupTemporaryFiles();
+
+    expect(await directory.exists(), isFalse);
+  });
+}
