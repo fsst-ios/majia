@@ -1,0 +1,13 @@
+"widget_name" = "RoamSum";
+"widget_description" = "See a travel cost snapshot without opening the app.";
+"widget_ready" = "Widget scaffold ready";
+"widget_empty" = "No summary yet";
+"widget_open_app" = "Open the app to prepare a summary.";
+"widget_cached" = "Cached rate";
+"widget_stale" = "Rate may be out of date";
+"widget_trip_spent" = "Trip spent";
+"widget_total_spent" = "Total spent";
+"widget_recent_spending" = "Recent spending";
+"widget_expense_count" = "%d expenses";
+"widget_budget" = "Budget";
+"widget_latest" = "Latest";

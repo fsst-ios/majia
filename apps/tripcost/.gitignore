@@ -1,0 +1,67 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.codex-artifacts/
+.pub-cache/
+.pub/
+/build/
+/ios/build/
+/coverage/
+
+# CocoaPods resolution must be committed for reproducible local and cloud builds.
+!ios/Podfile.lock
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+manual-expense-editor-comparison.png
+manual-expense-editor-simulator-853x1844.png
+manual-expense-editor-simulator.png
+expense-ocr-prefill-simulator.png
+scan-record-simulator.png
+scan-record-flow-comparison.png
+expense-context-picker-trip-list-simulator.png
+expense-context-picker-source-sheet.png
+expense-context-picker-simulator.png
+expense-context-picker-simulator-v3.png
+expense-context-picker-simulator-v3-normalized.png
+expense-context-picker-simulator-v2.png
+expense-context-picker-sheet-comparison.png
+expense-context-picker-implementation-sheet.png
+expense-context-picker-comparison.png
+settings-redesign-iphone17.png
+settings-redesign-comparison.png
