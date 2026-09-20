@@ -29,10 +29,10 @@ flutter run \
 
 ## iOS 云构建
 
-仓库通过手动触发的 `Flutter iOS Release` GitHub Actions 工作流归档 Runner 和 AppWidget。工作流默认不上传 App Store Connect；生产签名材料只存放在受保护的 `tripcost-production` Environment 中。
+仓库通过手动触发的 `TripCost iOS Release` GitHub Actions 工作流归档 Runner 和 AppWidget。工作流默认不上传 App Store Connect；生产签名材料只存放在受保护的 `tripcost-production` Environment 中。
 
 - 构建配置：`.github/ios-build.yml`
-- 工作流：`.github/workflows/ios-release.yml`
+- 工作流：[`../../.github/workflows/tripcost-ios-release.yml`](../../.github/workflows/tripcost-ios-release.yml)
 - 首次验证：使用 `upload_to_asc=false`，并核对远端 SHA、IPA 中的两个 Bundle ID、签名 Team 和 embedded profiles。
 - 正式上传：确认使用未占用的 build number 后，再使用 `upload_to_asc=true`。
 

@@ -1,4 +1,4 @@
-name: Flutter iOS Release
+name: TripCost iOS Release
 
 on:
   workflow_dispatch:
@@ -42,12 +42,12 @@ jobs:
         with:
           ruby-version: "3.3.0"
           bundler-cache: true
-          working-directory: .
+          working-directory: apps/tripcost
 
       - name: Build, retain, and optionally upload RoamSum for iOS
         uses: CherryIce/ios-multi-app-cloud-build-system/.github/actions/build-upload@92be072bbded79b3fd8feca41cb3b9a79f8a461c
         with:
-          config_path: .github/ios-build.yml
+          config_path: apps/tripcost/.github/ios-build.yml
           marketing_version: ${{ inputs.marketing_version }}
           build_number: ${{ inputs.build_number }}
           upload_to_asc: ${{ inputs.upload_to_asc }}
