@@ -1,4 +1,4 @@
-# HEARTHIO FLUTTER APP CONFIG: review signing material before the first remote build.
+# Donesome iOS build configuration for the monorepo layout.
 schema_version: 2
 
 release:
@@ -20,7 +20,7 @@ app:
       profile_alias: app
 
 flutter:
-  project_directory: Hearthio
+  project_directory: apps/donesome/Hearthio
   version: 3.35.7
   channel: stable
   architecture: arm64
@@ -28,7 +28,7 @@ flutter:
 
 build:
   container_type: workspace
-  container_path: Hearthio/ios/Runner.xcworkspace
+  container_path: apps/donesome/Hearthio/ios/Runner.xcworkspace
   scheme: Run-Release
   configuration: Release
   runner: macos-26

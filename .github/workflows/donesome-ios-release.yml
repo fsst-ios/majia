@@ -1,6 +1,4 @@
-# FLUTTER APP REPOSITORY TEMPLATE: replace the action SHA, Environment, config,
-# ASC App ID, and Secrets before use.
-name: Flutter iOS Release
+name: Donesome iOS Release
 
 on:
   workflow_dispatch:
@@ -23,7 +21,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: flutter-ios-production-${{ github.repository }}
+  group: donesome-ios-production-${{ github.repository }}
   cancel-in-progress: false
   queue: max
 
@@ -44,12 +42,12 @@ jobs:
         with:
           ruby-version: "3.3.0"
           bundler-cache: true
-          working-directory: Hearthio
+          working-directory: apps/donesome/Hearthio
 
-      - name: Build, retain, and optionally upload Flutter iOS app
+      - name: Build, retain, and optionally upload LAURUS for iOS
         uses: CherryIce/ios-multi-app-cloud-build-system/.github/actions/build-upload@92be072bbded79b3fd8feca41cb3b9a79f8a461c
         with:
-          config_path: .github/ios-build.yml
+          config_path: apps/donesome/.github/ios-build.yml
           marketing_version: ${{ inputs.marketing_version }}
           build_number: ${{ inputs.build_number }}
           upload_to_asc: ${{ inputs.upload_to_asc }}
