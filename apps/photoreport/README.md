@@ -21,7 +21,7 @@
 - Flutter 负责数据录入、照片清单、标注编辑和项目管理。
 - SQLite (`sqflite`) 保存项目、记录、照片索引与标注 JSON。
 - iOS `UIGraphicsPDFRenderer` 负责中文 A4 整理，`QuickLook` 预览，系统分享面板发送。
-- 首版仅生成 iOS 工程，最低部署版本由 Flutter 插件约束为 iOS 13。
+- 首版仅生成 iOS 工程，最低部署版本为 iOS 15.0。
 
 ## 本地运行
 

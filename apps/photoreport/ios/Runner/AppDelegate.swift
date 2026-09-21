@@ -1,6 +1,7 @@
 import Flutter
 import QuickLook
 import UIKit
+import UniformTypeIdentifiers
 
 @main
 @objc class AppDelegate: FlutterAppDelegate, QLPreviewControllerDataSource, UIDocumentPickerDelegate {
@@ -112,8 +113,8 @@ import UIKit
         return
       }
       let picker = UIDocumentPickerViewController(
-        documentTypes: ["public.data", "public.json"],
-        in: .import
+        forOpeningContentTypes: [.data, .json],
+        asCopy: true
       )
       guard let presenter = currentViewController() else {
         result(FlutterError(code: "missing_presenter", message: copy.text("暂时无法打开文件选择器"), details: nil))
