@@ -44,7 +44,7 @@
 
 ## 未测试层
 
-- 未跑实体 iPhone/Android、最低 iOS 13 设备、后台终止恢复、低内存或低存储。
+- 未跑实体 iPhone/Android、最低 iOS 15 设备、后台终止恢复、低内存或低存储。
 - 未跑 VoiceOver/TalkBack、最大 Dynamic Type、横屏和每关 iPad 全流程。
 - 最终模拟器证据覆盖 iPhone 深色英文大字首页与 iPad 浅色中文首页；完整作答链由 Widget 自动化覆盖，不能替代最终代码的逐页视觉验收。
 - 未做签名 Release、安装包真机安装、TestFlight、App Store Connect 或 App Review。

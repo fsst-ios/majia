@@ -25,7 +25,7 @@
     "无系统权限"
   ],
   "user_generated_content": false,
-  "minimum_ios_assumption": "iOS 13.0；最终以 Flutter/Xcode 生成设置、实体设备和当前提交要求为准",
+  "minimum_ios_assumption": "iOS 15.0；最终以 Flutter/Xcode 生成设置、实体设备和当前提交要求为准",
   "visual_direction": "原创的“证据工作台”：墨蓝底色、暖琥珀实验控件、薄荷绿公平对照；用分步实验卡和同数据双视图突出因果关系，不复刻参考产品的信息层级、品牌、素材或文案；支持系统深色模式、大字体与响应式布局。",
   "reference_products": [
     "https://apps.apple.com/cn/app/id1625543103",

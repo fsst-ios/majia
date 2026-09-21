@@ -15,6 +15,8 @@ The app has no account, backend, advertising, analytics, network content, or
 system permissions. It stores only language preference and learning attempts in
 local `SharedPreferences`. Settings includes a confirmed clear-all action.
 
+The iOS app supports iOS 15.0 and later.
+
 ## Run and test
 
 ```bash
