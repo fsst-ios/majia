@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "run": {
+    "run_id": "trip-delta-20260918-01",
+    "project_ref": "trip-delta",
+    "scope": "release_candidate",
+    "skill_revision": "unknown: installed skill has no local version or Git identity; SKILL.md SHA-256 9d8212c51331f3fc2167f438e8673eefcb29585d9996ebfdc1c3f62f14cd133b",
+    "project_revision": "unknown: project is not a Git repository; see docs/release/evidence/source-hashes.txt",
+    "finished_at": "2026-09-18T11:54:38+08:00",
+    "product_verdict": "passed"
+  },
+  "summary": {
+    "worked": [
+      "Category budget baseline and category variance were implemented independently; see docs/product/DIFFERENTIATION.md and docs/release/FUNCTIONAL_REVIEW.md.",
+      "Final format, analyze, 10 tests, Android Debug build and unsigned iOS Archive passed; see docs/release/evidence/automation/20260918T115136+0800/QUALITY_GATE.md.",
+      "iPhone 16 primary path, iPhone SE long title and iPad 30-entry detail were observed; see docs/release/EVIDENCE_REGISTER.md."
+    ],
+    "failed": [
+      "Store preflight remains blocked by placeholder bundle identity, missing public privacy/support URLs and unsigned archive; see docs/release/evidence/automation/preflight-20260918T115236+0800/RELEASE_PREFLIGHT.md.",
+      "The default Flutter icon and launch image survived pixel-validity checks; Store Reviewer identified the template asset and build warning; see docs/release/APP_STORE_PREFLIGHT.md.",
+      "Store review found that local-only privacy copy ignored possible system device backups. Copy was corrected and final local gates rerun; public policy remains unpublished."
+    ],
+    "untested": [
+      "Physical devices, Android runtime, iOS 15, full accessibility/keyboard/rotation/low-storage matrix, signed IPA, App Store Connect and App Review were not performed; see docs/release/EVIDENCE_REGISTER.md."
+    ]
+  },
+  "lessons": [
+    {
+      "pattern_key": "flutter.icon-template-identity",
+      "severity": "P1",
+      "symptom": "Mechanical app icon check passed size and alpha although the icon was the default Flutter logo.",
+      "phase": "App Store preflight",
+      "cause_confidence": "confirmed",
+      "cause": "The mechanical preflight checks image properties but not known template identity or Xcode's placeholder warning.",
+      "evidence": [
+        "docs/release/evidence/automation/preflight-20260918T115236+0800/RELEASE_PREFLIGHT.md",
+        "docs/release/evidence/automation/20260918T115136+0800/ios-unsigned-archive.log",
+        "docs/release/APP_STORE_PREFLIGHT.md"
+      ],
+      "proposed_change": "Consider warning when the icon matches known Flutter starter hashes or the archive log reports a placeholder icon; leave originality as a human review.",
+      "regression_check": "A stock Flutter project is flagged while an independently created icon with valid size is not; no automatic copyright judgment is made."
+    },
+    {
+      "pattern_key": "flutter.local-backup-copy",
+      "severity": "P1",
+      "symptom": "App copy said records stayed only on one device even though Application Support data may enter a system backup.",
+      "phase": "Independent Store review",
+      "cause_confidence": "confirmed",
+      "cause": "Privacy copy equated absence of an app backend with absence of platform-managed backups.",
+      "evidence": [
+        "lib/store.dart",
+        "lib/strings.dart",
+        "docs/release/PRIVACY_POLICY_DRAFT.md",
+        "docs/release/APP_STORE_PREFLIGHT.md"
+      ],
+      "proposed_change": "Add one backup-semantics question to the privacy review template for app-private persistent files, distinguishing developer upload from platform backup.",
+      "regression_check": "A sample app using Application Support cannot pass a local-only wording review without stating backup behavior or excluding files from backup."
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-18T11:52:36+08:00",
+  "project": "/Users/starburst/Downloads/app-ui-atlas/trip_delta",
+  "verdict": "blocked",
+  "git": {
+    "is_repository": false
+  },
+  "archive": {
+    "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/ios/archive/Runner.xcarchive",
+    "exists": true,
+    "app": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app",
+    "info": {
+      "CFBundleIdentifier": "com.example.tripDelta",
+      "CFBundleShortVersionString": "1.0.0",
+      "CFBundleVersion": "1",
+      "MinimumOSVersion": "15.0",
+      "DTXcode": "2650",
+      "DTSDKName": "iphoneos26.5",
+      "CFBundleDevelopmentRegion": "en"
+    },
+    "frameworks": [
+      "App.framework",
+      "Flutter.framework",
+      "path_provider_foundation.framework"
+    ]
+  },
+  "checks": [
+    {
+      "key": "source_traceability",
+      "status": "warning",
+      "summary": "No commit-level Git identity is available.",
+      "evidence": {
+        "is_repository": false
+      },
+      "limitation": null
+    },
+    {
+      "key": "bundle_identity",
+      "status": "blocker",
+      "summary": "Missing or placeholder iOS Bundle ID.",
+      "evidence": {
+        "identifiers": [
+          "com.example.tripDelta",
+          "com.example.tripDelta.RunnerTests"
+        ],
+        "placeholders": [
+          "com.example.tripDelta"
+        ],
+        "expected_bundle_id": "com.example.tripDelta"
+      },
+      "limitation": null
+    },
+    {
+      "key": "privacy_url",
+      "status": "blocker",
+      "summary": "Privacy Url: not provided.",
+      "evidence": null,
+      "limitation": null
+    },
+    {
+      "key": "support_url",
+      "status": "blocker",
+      "summary": "Support Url: not provided.",
+      "evidence": null,
+      "limitation": null
+    },
+    {
+      "key": "preview_labels",
+      "status": "pass",
+      "summary": "No common MVP/prototype/demo wording was found in the scanned app-facing source types.",
+      "evidence": {
+        "hits": [],
+        "scanned_suffixes": [
+          ".arb",
+          ".dart",
+          ".java",
+          ".json",
+          ".kt",
+          ".m",
+          ".mm",
+          ".plist",
+          ".strings",
+          ".swift",
+          ".txt",
+          ".xcstrings",
+          ".xml",
+          ".yaml",
+          ".yml"
+        ]
+      },
+      "limitation": "This bounded source scan does not inspect remote content, generated store metadata, or every possible asset format."
+    },
+    {
+      "key": "app_icon",
+      "status": "pass",
+      "summary": "1024px AppIcon exists without alpha.",
+      "evidence": {
+        "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+        "width": 1024,
+        "height": 1024,
+        "has_alpha": false
+      },
+      "limitation": "This does not establish originality, trademark clearance, or complete asset-catalog coverage."
+    },
+    {
+      "key": "archive_info",
+      "status": "pass",
+      "summary": "Archive Info.plist was parsed.",
+      "evidence": {
+        "CFBundleIdentifier": "com.example.tripDelta",
+        "CFBundleShortVersionString": "1.0.0",
+        "CFBundleVersion": "1",
+        "MinimumOSVersion": "15.0",
+        "DTXcode": "2650",
+        "DTSDKName": "iphoneos26.5",
+        "CFBundleDevelopmentRegion": "en"
+      },
+      "limitation": null
+    },
+    {
+      "key": "code_signing_presence",
+      "status": "blocker",
+      "summary": "Archive lacks a validating signature or embedded provisioning profile.",
+      "evidence": {
+        "verify_return_code": 1,
+        "verify_output": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app: code object is not signed at all\nIn architecture: arm64",
+        "details": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app: code object is not signed at all",
+        "embedded_mobileprovision": false
+      },
+      "limitation": "This does not identify the profile as App Store distribution, validate its entitlements or expiry, or prove App Store Connect acceptance."
+    },
+    {
+      "key": "privacy_manifests",
+      "status": "pass",
+      "summary": "Privacy manifests were found and parsed.",
+      "evidence": [
+        {
+          "path": "Frameworks/Flutter.framework/PrivacyInfo.xcprivacy",
+          "valid_plist": true
+        },
+        {
+          "path": "Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle/PrivacyInfo.xcprivacy",
+          "valid_plist": true
+        }
+      ],
+      "limitation": "Manifest presence does not replace a final Xcode Privacy Report or App Store privacy answers."
+    },
+    {
+      "key": "archive_dependencies",
+      "status": "info",
+      "summary": "Recorded embedded archive frameworks for reviewer inspection.",
+      "evidence": [
+        "App.framework",
+        "Flutter.framework",
+        "path_provider_foundation.framework"
+      ],
+      "limitation": "This is a package inventory, not network or SDK-behavior proof."
+    },
+    {
+      "key": "archive_source_identity",
+      "status": "pass",
+      "summary": "Archive Bundle ID matches the selected source configuration.",
+      "evidence": {
+        "expected": "com.example.tripDelta",
+        "archive": "com.example.tripDelta"
+      },
+      "limitation": "Bundle ID equality does not prove that the archive was built from the current commit."
+    },
+    {
+      "key": "archive_source_version",
+      "status": "pass",
+      "summary": "Archive version and build number match the expected Flutter source values.",
+      "evidence": {
+        "expected_version": "1.0.0",
+        "expected_build_number": "1",
+        "archive_version": "1.0.0",
+        "archive_build_number": "1"
+      },
+      "limitation": null
+    },
+    {
+      "key": "screenshots",
+      "status": "warning",
+      "summary": "Screenshots exist but at least one has alpha or is unreadable.",
+      "evidence": [
+        {
+          "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone16-completed-en.png",
+          "width": 1179,
+          "height": 2556,
+          "has_alpha": true
+        },
+        {
+          "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone16-empty-zh.png",
+          "width": 1179,
+          "height": 2556,
+          "has_alpha": true
+        },
+        {
+          "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone-se-stress-home-en.png",
+          "width": 750,
+          "height": 1334,
+          "has_alpha": true
+        },
+        {
+          "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/ipad11-stress-home-en.png",
+          "width": 1668,
+          "height": 2420,
+          "has_alpha": true
+        }
+      ],
+      "limitation": "Current App Store device classes, required counts, content, and final-build provenance still require live review."
+    },
+    {
+      "key": "requested_artifacts",
+      "status": "pass",
+      "summary": "All explicitly requested artifacts exist and will be recorded.",
+      "evidence": {
+        "requested": [
+          "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/app/outputs/flutter-apk/app-debug.apk"
+        ],
+        "missing": []
+      },
+      "limitation": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/app/outputs/flutter-apk/app-debug.apk",
+      "size_bytes": 161204141,
+      "modified_at": "2026-09-18T11:51:48.951753+08:00",
+      "sha256": "010b829bca165076c3c6883dc644962c99248eb29b62a82b1b333dece2d5f507"
+    },
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app/Runner",
+      "size_bytes": 73808,
+      "modified_at": "2026-09-18T11:52:12.129457+08:00",
+      "sha256": "a66a629dc0315563efb8b8b721edaac2f3ed9aa7bb26e7118b19609a25d5d428"
+    },
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone16-completed-en.png",
+      "size_bytes": 143948,
+      "modified_at": "2026-09-18T11:38:34.732997+08:00",
+      "sha256": "47cdad33387a8883ee0ee9cda1a3806b93389a19f14df2acd05dd13a8e391fc5"
+    },
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone16-empty-zh.png",
+      "size_bytes": 162903,
+      "modified_at": "2026-09-18T11:34:15.671807+08:00",
+      "sha256": "b75eee0eb1243786d8012fe773176029db5e0f71122d10ae98746bcf6032e605"
+    },
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/iphone-se-stress-home-en.png",
+      "size_bytes": 95659,
+      "modified_at": "2026-09-18T11:42:51.349890+08:00",
+      "sha256": "46672dd6299858223b1b45210caafa5c7f432d292671ff9760e7a212cab51f7e"
+    },
+    {
+      "path": "/Users/starburst/Downloads/app-ui-atlas/trip_delta/docs/release/evidence/ipad11-stress-home-en.png",
+      "size_bytes": 160000,
+      "modified_at": "2026-09-18T11:43:58.998867+08:00",
+      "sha256": "783095975c969e346b09c30b65a8cff96d17f914ea822876ddd2c2fd39b2d320"
+    }
+  ]
+}

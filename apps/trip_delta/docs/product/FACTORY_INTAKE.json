@@ -1,0 +1,42 @@
+{
+  "app_name": "旅程差额 / Trip Delta",
+  "working_name": "trip_delta",
+  "target_user": "会在出发前按类别做预算，并想在旅行后知道偏差来自哪里的个人旅行者",
+  "problem": "预算常是一笔总数，途中支出与出发前分类计划脱节；结束后很难解释超支或结余",
+  "product_promise": "把出发前的分类预算固定为基线，把旅途中的每笔实际支出归类，结束时给出可核对的差额总结",
+  "core_loop": "创建旅程与分类预算 → 锁定基线 → 离线记录消费及手填换算率 → 查看分类偏差 → 写下复盘并完成旅程 → 可重新打开纠错",
+  "durable_output": "本机保存的逐类别计划与实付对照、逐笔来源以及可复制的文字总结",
+  "scope": "release_candidate",
+  "platform": "Flutter；iOS 与 Android 源码，App Store 只评估 iOS",
+  "launch_regions": [
+    "中国大陆（假设）",
+    "英语地区（假设）"
+  ],
+  "languages": [
+    "zh-Hans",
+    "en"
+  ],
+  "monetization": "免费，无广告、订阅或 IAP（MVP 假设）",
+  "account_model": "无账号",
+  "backend_model": "无应用后台；核心操作完全离线",
+  "data_handling": "用户手填计划与支出仅写入应用私有本地文件；不上传；可在应用内删除旅程；可复制文本摘要；暂不提供备份导入",
+  "sensitive_data": "个人支出记录属于财务相关私人数据；不连接银行、资金账户或支付服务",
+  "permissions": [
+    "无运行时权限；复制总结使用系统剪贴板"
+  ],
+  "user_generated_content": false,
+  "minimum_ios_assumption": "iOS 15.0，最终以构建产物和官方当前要求核验",
+  "visual_direction": "原创纸张式对照表：暖灰底色、深青色行动强调、细分隔线；首屏优先显示下一步，详情把预算与实付并列，长名称换行显示。参考概念仅作为任务需求，不采用其品牌、页面结构或配色。",
+  "reference_products": [
+    "docs/product/references/071.html",
+    "https://apps.apple.com/cn/app/roamsum/id6803728146",
+    "https://github.com/CherryIce/TripCost/tree/version/v1.0.0",
+    "https://travel-spend.com/"
+  ],
+  "learning_records": [],
+  "forbidden_actions": [
+    "不创建或修改生产证书和账号",
+    "不上传 App Store Connect",
+    "不提交审核"
+  ]
+}

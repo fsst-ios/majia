@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | Jufu（photo） | [`apps/photo/`](apps/photo/) | [`CherryIce/photo`](https://github.com/CherryIce/photo)，迁移基点 `295a625059f8f4102d194029ba9bc58c68e87eb6` |
 | TripCost（RoamSum） | [`apps/tripcost/`](apps/tripcost/) | [`CherryIce/TripCost`](https://github.com/CherryIce/TripCost)，迁移基点 `5e8e2975d0967a31691529ef603e22e0f1cb63cb` |
+| Trip Delta（旅程差额） | [`apps/trip_delta/`](apps/trip_delta/) | 独立 Flutter MVP，离线优先、中英文、无账号 |
 | Donesome（LAURUS） | [`apps/donesome/`](apps/donesome/) | [`CherryIce/Donesome`](https://github.com/CherryIce/Donesome)，迁移基点 `ccc86d05c66935005d0db25a4c50224a07633119` |
 | Cleantrail | [`apps/cleantrail/`](apps/cleantrail/) | [`CherryIce/Cleantrail`](https://github.com/CherryIce/Cleantrail)，迁移基点 `487c079c9f9b336dcedb586b80f9cca862c7a896` |
 | plotproof_lab | [`apps/plotproof_lab/`](apps/plotproof_lab/) | [`CherryIce/plotproof_lab`](https://github.com/CherryIce/plotproof_lab)，迁移基点 `7abd805f1ca6448e09dafbef6db3a153f20c6b0c` |
