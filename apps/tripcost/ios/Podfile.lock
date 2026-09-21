@@ -100,11 +100,11 @@ SPEC CHECKSUMS:
   shared_preferences_foundation: 7036424c3d8ec98dfe75ff1667cb0cd531ec82bb
   sqlite3: a51c07cf16e023d6c48abd5e5791a61a47354921
   sqlite3_flutter_libs: b3e120efe9a82017e5552a620f696589ed4f62ab
-  stmini_flutter: c836ac4b8441bc7b850fcc96340066985a057e56
+  stmini_flutter: 165cc93b01477ce0c7043a05af74cd5f09520774
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
   url_launcher_ios: 7a95fa5b60cc718a708b8f2966718e93db0cef1b
   ZIPFoundation: dfd3d681c4053ff7e2f7350bc4e53b5dba3f5351
 
-PODFILE CHECKSUM: ce2a4dd764e1c7aeed6a7cdc5e61d092b6dc6d32
+PODFILE CHECKSUM: 92accab0dd503fefe942e03fd19a8eed01412fae
 
 COCOAPODS: 1.17.0
