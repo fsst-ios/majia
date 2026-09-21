@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary              = "小程序组件"
   s.author               = "hxw"
   s.homepage             = "http://www.baidu.com"
-  s.platform             = :ios, "12"
+  s.platform             = :ios, "15.0"
   s.source               = { :git => 'https://github.com/', :tag => s.version.to_s }
   s.source_files        = 'classes/**/*'
   s.exclude_files       = 'classes/**/*.md', '**/readme.md'
